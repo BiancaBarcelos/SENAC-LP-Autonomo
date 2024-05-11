@@ -1,0 +1,289 @@
+:root{
+    --primary:#D6D2D3;
+    --secondary:#4AA7B9;
+    --secondary-dark:#459298;
+    --tertiary:#3F3735;
+    --bg-color:#E4E2DD;
+    --text-color:#393738;
+    --text-invert-color:#FFFFFF;
+    --emphasys:#F0F2F1;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Roboto", sans-serif;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+p {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 3rem;
+}
+a {
+    font-size: 1.5rem;
+}
+img{
+    width: 100%;
+}
+.linha{
+    width: 10rem;
+    height: .3rem;
+    margin: 2rem 0 3rem;
+    background-color: var(--secondary-dark);
+}
+.full-width{
+    width: 100%;
+}
+.btn{
+    display: block;
+    margin: auto;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    width:fit-content;
+}
+.btn-primary{
+    background-color: var(--secondary);
+    color: var(--text-invert-color);
+    font-size: 2rem;
+}
+.btn-secondary{
+    background-color: var(--secondary-dark);
+    color: var(--text-invert-color);
+    font-size: 1.6rem;
+}
+.btn-tertiary{
+    color: var(--secondary-dark);
+}
+
+.card-box{
+    display: flex;
+}
+.card-box .card{
+    padding: 8rem 6rem;
+    .btn{
+        margin: 1rem 0 0;
+        padding: 1rem 0;
+    }
+    &.card-1{
+        background-color: var(--tertiary);
+        color: var(--primary);
+    }
+    &.card-2{
+        background-color: var(--bg-color);
+        color: var(--tertiary);
+    }
+    &.card-3{
+        background-color: var(--emphasys);
+        color: var(--tertiary);
+    }
+    &.card-4{
+        background-color: var(--primary);
+        color: var(--tertiary);
+    }
+}
+
+.container{
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+    &.container_invert{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+#sessao1 {
+    width: 100%;
+    background-image: url("assets/sessao1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40rem 0 20rem;
+    display: flex;
+    align-items: center;
+    
+    h2,p{
+        color: var(--text-color);
+    }
+}
+.box-text{
+    max-width: 50rem;
+    width: 100%;
+    transform: translateY(80%);
+    *{
+        margin: 1rem 0;
+    }
+}
+#sessao2{
+    .card{
+        width: 25%;
+    }
+}
+#sessao3{
+    background-image: url("assets/sessao3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3rem 0;
+    min-height: 70rem;
+    .container_invert .box-text{
+        text-align: right;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+    }
+}
+
+#sessao4,.desc-box{
+    display: flex;
+    .desc-box{
+        width: 50%;
+        justify-content: space-between;
+        padding: 8rem 6rem 0 ;
+        .card-desc{
+            width: 27rem;
+        }
+        img{
+            width: 35rem;
+        }
+        .btn{
+            margin: 0;
+            padding-left:0 ;
+        }
+    }
+}
+.bg-dark{
+    background-color: var(--tertiary);
+    color: var(--text-invert-color);
+}
+#sessao5{
+    display: flex;
+    .box-vantagens{
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+    }
+    .vantagens-image{
+        width: 50%;
+        background-image: url(./assets/sessao5.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .card{
+        width: 50%;
+    }
+}
+footer{
+    margin-top: -.5rem;
+    display: flex;
+    &>div{
+        width: 50%;
+    }
+    .social{
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+        align-items: center;
+    }
+    form{
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        input{
+            flex: 2;
+            font-size: 2rem;
+            border: .2rem solid var(--tertiary);
+            color: var(--text-color);
+            padding: 1rem;
+        }
+        textarea{
+            width: 100%;
+            resize: none;
+            font-size: 2rem;
+            border: .2rem solid var(--tertiary);
+            color: var(--text-color);
+            padding: 1rem;
+
+        }
+        .btn{
+            padding: 1rem 2rem!important;
+        }
+    }
+}
+
+@media screen and (max-width:1300px) {
+    p{
+        font-size: 1.4rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .card-box .card{
+        padding: 6rem 4rem;
+    }
+}
+@media screen and (max-width:911px) {
+    .container{
+       width: 90%;
+    }
+    #sessao2 .card-box,
+    #sessao4,
+    #sessao5,
+    footer{
+        flex-wrap: wrap;
+    }
+    .box-text{
+        width: 50%;
+    }
+    #sessao1{
+        background-position: 70% center;
+    }
+    #sessao2 {
+        .card {
+            width: 50%;
+        }
+    }
+    #sessao4 {
+        .desc-box {
+            width: 100%;
+        }
+    }
+    #sessao5 {
+        .box-vantagens,.vantagens-image {
+            width: 100%;
+        }
+        .vantagens-image{
+            height: 50vh;
+        }
+    }
+    footer{
+        .invert-order-mobile{
+            order: 1;
+        }
+    }
+    footer>div{
+        width: 100%;
+    }
+}
+@media screen and (max-width:400px){
+    .desc-box{
+        flex-flow: column;
+    }
+    #sessao2,#sessao5 {
+        .card {
+            width: 100%;
+        }
+    }
+}
